@@ -11,7 +11,26 @@ applicacion.config(function ($stateProvider, $urlRouterProvider) {
     url: '/home',
     templateUrl: 'html/angular/views/home.html',
     controller: 'homeController'
-  });
-
+  })
+  .state('categoriaHome', {
+    url: '/categoria/home',
+    templateUrl: 'html/angular/views/categoria/home.html',
+    controller: 'categoriaHomeController'
+  })
+  .state('postRegistrar', {
+    url: '/post/registrar',
+    templateUrl: 'html/angular/views/post/registrar.html',
+    controller: 'postRegistrarController'
+  })
+  .state('usuarioIniciarSesion', {
+    url: '/login',
+    templateUrl: 'html/angular/views/usuario/iniciarSesion.html',
+    controller: 'iniciarSesionController'
+  })
+  .state('usuarioRegistrar', {
+    url: '/usuario/registrar',
+    templateUrl: 'html/angular/views/usuario/iniciarSesion.html',
+    controller: 'usuarioRegistrarController'
+  })
 });
 console.log("cargo2");
