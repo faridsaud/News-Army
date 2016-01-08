@@ -31,14 +31,17 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
-
+  '/': {
+    view: 'homepage'
+  }
+/*
   '/': {
     view: 'homepage'
   },
   '/Categoria':{
     policy:'sessionAuth'
   }
-
+*/
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

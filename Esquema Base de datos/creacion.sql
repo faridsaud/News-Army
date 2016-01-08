@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     1/6/2016 11:27:55 PM                         */
+/* Created on:     1/7/2016 8:36:02 PM                          */
 /*==============================================================*/
 
 
@@ -44,6 +44,8 @@ create table NOTICIA
    IDCATEGORIA          int not null,
    TITULONOTICIA        varchar(50) not null,
    CONTENIDONOTICIA     varchar(200) not null,
+   FECHACREACIONNOTICIA datetime,
+   FECHAACTUALIZACIONNOTICIA datetime,
    primary key (IDNOTICIA)
 );
 

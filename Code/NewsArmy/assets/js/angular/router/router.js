@@ -13,12 +13,12 @@ applicacion.config(function ($stateProvider, $urlRouterProvider) {
     controller: 'homeController'
   })
   .state('categoriaHome', {
-    url: '/categoria/home',
+    url: '/categoria/home/{idCategoria:int}',
     templateUrl: 'html/angular/views/categoria/home.html',
     controller: 'categoriaHomeController'
   })
   .state('postRegistrar', {
-    url: '/post/registrar',
+    url: '/post/registrar/{idCategoria:int}/{idUsuario:int}',
     templateUrl: 'html/angular/views/post/registrar.html',
     controller: 'postRegistrarController'
   })

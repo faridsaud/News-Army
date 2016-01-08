@@ -17,7 +17,10 @@ primary key (IDNOTICIA)
 */
 module.exports = {
 
+  autoCreatedAt: true,
+  autoUpdatedAt: true,
   tableName:'NOTICIA',
+
   attributes: {
 
     id:{
@@ -50,6 +53,14 @@ module.exports = {
     imagenes:{
       collection:'imagen',
       via:'imagenDe'
+    },
+    createdAt:{
+      type: 'datetime',
+      columnName: 'fechaCreacionNoticia'
+    },
+    updatedAt:{
+      type: 'datetime',
+      columnName: 'fechaActualizacionNoticia'
     }
 
   }
