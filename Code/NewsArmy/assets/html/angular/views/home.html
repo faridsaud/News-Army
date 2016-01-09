@@ -48,6 +48,7 @@
     </h3>
   </div>
 </div>
+<!--noticia in ultimas6Noticias y imagen in noticia.imagenes track by $index-->
 <div class="row">
   <div ng-repeat="noticia in ultimas6Noticias">
 
@@ -67,16 +68,16 @@
             </div>
           </div>
         </ol>
-        <div class="carousel-inner">
+        <div class="carousel-inner" role="listbox">
           <div ng-repeat="imagen in noticia.imagenes track by $index">
             <div ng-if="$index==0">
               <div class="item active">
-                <img alt="Carousel Bootstrap First" src="{{imagen.ruta}}" />
+                <img alt="Carousel Bootstrap First"  class="img-responsive" src="{{imagen.ruta}}" />
               </div>
             </div>
             <div ng-if="$index!=0">
               <div class="item">
-                <img alt="Carousel Bootstrap Second" src="{{imagen.ruta}}" />
+                <img alt="Carousel Bootstrap Second"  class="img-responsive" src="{{imagen.ruta}}" />
               </div>
             </div>
           </div>
@@ -89,15 +90,16 @@
         </a>
       </div>
       <div class="media">
-        <a href="#" class="pull-left"><img alt="Bootstrap Media Preview" src="{{noticia.creador.pathImagen}}" class="media-object" /></a>
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" src=""{{noticia.creador.pathImagen}}"" alt="">
+          </a>
+        </div>
         <div class="media-body">
           <h4 class="media-heading">
             {{noticia.titulo}}
           </h4> {{noticia.descripcion}}
-          <div class="media">
-            <div class="media-body">
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
