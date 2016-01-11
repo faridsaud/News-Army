@@ -33,7 +33,10 @@ module.exports.routes = {
   ***************************************************************************/
   '/': {
     view: 'homepage'
-  }
+  },
+  'post /login':'UsuarioController.iniciarSesion',
+  'post /Usuario/Registrar':'UsuarioController.registrar',
+
 /*
   '/': {
     view: 'homepage'

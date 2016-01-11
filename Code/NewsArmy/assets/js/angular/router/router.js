@@ -29,7 +29,7 @@ applicacion.config(function ($stateProvider, $urlRouterProvider) {
   })
   .state('usuarioRegistrar', {
     url: '/usuario/registrar',
-    templateUrl: 'html/angular/views/usuario/iniciarSesion.html',
+    templateUrl: 'html/angular/views/usuario/registrar.html',
     controller: 'usuarioRegistrarController'
   })
 });
