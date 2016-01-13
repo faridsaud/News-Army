@@ -5,43 +5,49 @@
       <img alt="Angry Drivers" class="img-responsive center-block" src="../../assets/angry.png" >
       <h1 class="text-center">{{categoriaActiva.nombre}}</h1>
       <p>{{categoriaActiva.descripcion}}</p>
-      <a class="btn btn-primary btn-lg" href="/post/registrar">Agregar Post</a>
+      <a class="btn btn-primary btn-lg" href="#/post/registrar">Agregar Post</a>
     </div>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-sm-12">
     <h3>
       Posts/News
     </h3>
   </div>
 </div>
 <div class="row">
-  <div ng-repeat="noticia in ultimas6NoticiasDeCategoria">
+  <div ng-repeat="noticia in ultimas6NoticiasDeCategoria track by $index">
 
-    <div class="col-md-4">
-      <div style="height: 305px">
-        <uib-carousel interval="3000" no-wrap="false">
-          <uib-slide ng-repeat="imagen in noticia.imagenes" active="slide.active" index="slide.id">
-            <img ng-src="{{imagen.ruta}}" style="margin:auto;">
+    <div class="col-sm-4">
+      <div class="panel panel-default" >
+        <div class="panel-body">
+          <uib-carousel interval="3000" no-wrap="false">
+            <uib-slide ng-repeat="imagen in noticia.imagenes" active="slide.active" index="slide.id">
+              <img ng-src="{{imagen.ruta}}" style="margin:auto;">
 
-          </uib-slide>
-        </uib-carousel>
-      </div>
-      <br>
-      <div class="media">
-        <div class="media-left">
-            <img class="media-object" style="max-width:64px;max-height:64px"src="{{noticia.imagenes[0].ruta}}" alt="">
+            </uib-slide>
+          </uib-carousel>
+
+          <br>
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" style="max-width:64px;max-height:64px"src="{{noticia.creador.pathImagen}}" alt="">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">
+                {{noticia.titulo}}
+              </h4> {{noticia.contenido}}
+
+            </div>
+          </div>
         </div>
-        <div class="media-body">
-          <h4 class="media-heading">
-            {{noticia.titulo}}
-          </h4> {{noticia.contenido}}
-
-        </div>
       </div>
+
     </div>
-
+  <div ng-if="$index==2">
+     <div class="clearfix visible-lg-block"></div>
+  </div>
   </div>
 </div>

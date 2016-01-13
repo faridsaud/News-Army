@@ -51,7 +51,7 @@ module.exports = {
 			// Save the "fd" and the url where the avatar for a user can be accessed
 			var str = uploadedFiles[0].fd;
 			var reg = str.match(/C:\\Users\\farid\\Documents\\7mo\\Web con js\\Proyecto\\FinalProject\\Code\\NewsArmy\\assets\\images\\users\\(.{0,})/);
-			var fileName = "/images/"+reg[1];
+			var fileName = "/images/users/"+reg[1];
 			Usuario.create({email:req.param('email'),password:req.param('password'),pathImagen:fileName})
 			.exec(function (error){
 				if (error){

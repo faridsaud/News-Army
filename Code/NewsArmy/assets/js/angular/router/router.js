@@ -18,7 +18,7 @@ applicacion.config(function ($stateProvider, $urlRouterProvider) {
     controller: 'categoriaHomeController'
   })
   .state('postRegistrar', {
-    url: '/post/registrar/{idCategoria:int}/{idUsuario:int}',
+    url: '/post/registrar',
     templateUrl: 'html/angular/views/post/registrar.html',
     controller: 'postRegistrarController'
   })

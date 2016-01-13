@@ -37,6 +37,8 @@ module.exports.routes = {
   'post /login':'UsuarioController.iniciarSesion',
   'post /Usuario/Registrar':'UsuarioController.registrar',
 
+  'post /Noticia/Registrar':'NoticiaController.registrar'
+
 /*
   '/': {
     view: 'homepage'

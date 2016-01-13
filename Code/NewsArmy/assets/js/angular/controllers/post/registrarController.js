@@ -1,4 +1,7 @@
 applicacion.controller('postRegistrarController',['$scope',function($scope){
-    console.log('Entraste a registrar post');
-    
+
+  console.log("categoriaActiva en post");
+  console.log($scope.categoriaActiva);
+
+
 }]);

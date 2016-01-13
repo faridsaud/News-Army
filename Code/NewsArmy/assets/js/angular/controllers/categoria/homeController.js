@@ -1,10 +1,12 @@
-applicacion.controller('categoriaHomeController',['$scope','$stateParams','categoriaFactory','noticiaFactory',function($scope,$stateParams,categoriaFactory,noticiaFactory){
+applicacion.controller('categoriaHomeController',['$scope','$stateParams','categoriaFactory','noticiaFactory','$rootScope',function($scope,$stateParams,categoriaFactory,noticiaFactory,$rootScope){
     console.log('Entraste a categoria home');
     console.log("Estamos en la categoria con id"+$stateParams.idCategoria);
     categoriaFactory.get({idCategoria:$stateParams.idCategoria}).$promise.then(function success(results){
       console.log(results);
       console.log(results.data);
-      $scope.categoriaActiva=results;
+      $rootScope.categoriaActiva=results;
+      console.log("categoria Activa");
+      console.log($scope.categoriaActiva);
     }, function error(error){
 
     });
