@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     1/7/2016 8:36:02 PM                          */
+/* Created on:     1/13/2016 9:20:56 AM                         */
 /*==============================================================*/
 
 
@@ -20,6 +20,7 @@ create table CATEGORIA
    NOMBRECATEGORIA      varchar(100) not null,
    DESCRIPCIONCATEGORIA varchar(400) not null,
    IDCATEGORIA          int not null auto_increment,
+   PATHIMAGENCATEGORIA  varchar(200),
    primary key (IDCATEGORIA)
 );
 

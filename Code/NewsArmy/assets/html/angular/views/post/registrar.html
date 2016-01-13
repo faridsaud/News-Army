@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
     <div class="jumbotron">
-      <img alt="Angry Drivers" class="img-responsive center-block" src="../../assets/angry.png" >
+      <img alt="Angry Drivers" class="img-responsive center-block" src="{{categoriaActiva.pathImagen}}" >
       <h1 class="text-center">{{categoriaActiva.nombre}}</h1>
       <p>{{categoriaActiva.descripcion}}</p>
     </div>
@@ -29,7 +29,7 @@
       </div>
 
       <div class="form-group">
-        <input type="hidden"   name="categoriaId" value="{{categoriaActiva.id}}" />{{categoriaActiva.id}}
+        <input type="hidden"   name="categoriaId" value="{{categoriaActiva.id}}" />
       </div>
       <div class="form-group">
 

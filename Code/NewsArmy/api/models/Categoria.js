@@ -34,6 +34,11 @@ module.exports = {
       required:true,
       columnName: 'DESCRIPCIONCATEGORIA'
     },
+    pathImagen:{
+      type:'string',
+      size:200,
+      columnName: 'PATHIMAGENCATEGORIA'
+    },
     noticias: {
       collection: 'noticia',
       via: 'pertenece'
