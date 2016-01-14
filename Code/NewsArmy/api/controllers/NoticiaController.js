@@ -54,6 +54,7 @@ module.exports = {
           console.log("error en la creacion de Noticia");
           return res.negotiate(err);
         }else{
+          Noticia.publishCreate(noticiaCreated);
           console.log("noticiaCreated"+noticiaCreated);
           console.log("creando imagenes");
           console.log(fileNames);
