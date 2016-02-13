@@ -1,5 +1,12 @@
 applicacion.controller('homeController',['$scope','categoriaFactory','noticiaFactory',function($scope,categoriaFactory,noticiaFactory){
 
+  io.socket.get('/Noticia',
+    function (resData, jwres) {
+      console.log('Se suscribio con blueprint de Sailsjs')
+
+      //$digest() es necesario para que se actualice en la vista
+      $scope.$digest();
+    });
     io.socket.on('noticia', function (msg) {
 
       // Let's see what the server has to say...
@@ -9,8 +16,8 @@ applicacion.controller('homeController',['$scope','categoriaFactory','noticiaFac
 
         console.log("socket create");
         $scope.ultimas6Noticias.pop();
-        $scope.ultimas6Noticias.push(msg.data); // (add the new order to the DOM)
-        $scope.$apply();      // (re-render)
+        $scope.ultimas6Noticias.unshift(msg.data); // (add the new order to the DOM)
+        $scope.$digest();      // (re-render)
         break;
 
         default: return; // ignore any unrecognized messages

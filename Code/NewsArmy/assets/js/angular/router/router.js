@@ -1,4 +1,4 @@
-console.log("cargandi2");
+console.log("router");
 applicacion.config(function ($stateProvider, $urlRouterProvider) {
 
 
